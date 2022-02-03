@@ -1,30 +1,22 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) throws IOException {
-        String filePath = "C:\\Java\\ACMP\\src\\main\\resources\\INPUT.TXT";
-        String filePathAcmp = "INPUT.TXT";
+        // Открытие файла ввода и вывода
+        String filePath = "INPUT.TXT";
+        File inputFile = new File(filePath);
+        FileWriter output = new FileWriter("OUTPUT.TXT");
+        Scanner input = new Scanner(inputFile);
 
-        // Тестирование локально
-//        File inputFile = new File(filePath);
+        // Начало решения
+        Integer a = input.nextInt();
+        output.write(a.toString());
+        //// Конец решения
 
-        // Отправка в ACMP
-        File inputFile = new File(filePathAcmp);
-
-        Scanner scanner = new Scanner(inputFile);
-
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int result = a + b;
-
-        FileWriter outputFile = new FileWriter("OUTPUT.TXT");
-        outputFile.write(Integer.toString(result));
-        outputFile.write("\n");
-        outputFile.close();
+        // Закрытие выходного файла
+        output.close();
     }
 }
