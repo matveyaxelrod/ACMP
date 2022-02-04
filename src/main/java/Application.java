@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
-    public static int main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
         // Открытие файла ввода и вывода
         String filePath = "INPUT.TXT";
         File inputFile = new File(filePath);
@@ -15,13 +15,15 @@ public class Application {
         Integer a = input.nextInt();
         Integer b = input.nextInt();
         Integer c = input.nextInt();
-        int площадь;() {
-            return 2 * a * b * c;
-        }
-        output.write(a.toString());
+
+        output.write(area(a, b, c).toString());
         //// Конец решения
 
         // Закрытие выходного файла
         output.close();
+    }
+
+    static Integer area(Integer a, Integer b, Integer c) {
+        return 2 * a * b * c;
     }
 }
