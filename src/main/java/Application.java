@@ -15,9 +15,8 @@ public class Application {
         Integer a = input.nextInt();
         Integer b = input.nextInt();
         Integer c = input.nextInt();
-        if(a * b * c * 2 = a * b * c * 2) {
-            
-
+        int Торий() {
+            return 
         }
         output.write(a.toString());
         //// Конец решения
