@@ -4,42 +4,31 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
-    public static int main(String[] args) throws IOException {
-        // Открытие файла ввода и вывода
-        String filePath = "INPUT.TXT";
-        File inputFile = new File(filePath);
-        FileWriter output = new FileWriter("OUTPUT.TXT");
-        Scanner input = new Scanner(inputFile);
+    public static void main(String[] args) throws IOException {
+        long time = System.currentTimeMillis(); // Количество миллисекунд с 00:00:00 01.01.1970 c GMT +0;
+        // 17:16
+        // 04.02.2022
+        // Время считается по времени в Лондоне.
+        // Поэтому добавляем 6 часов ко времени, чтобы получить наше время.
+        int timezone = 6;
+        long millis = time % 1000;
+        long seconds = time / 1000 % 60;
+        long minutes = time / 1000 / 60 % 60;
+        long hours = time / 1000 / 60 / 60 % 24;
+        long days = time / 1000 / 60 / 60 / 24;
 
-        // Начало решения
-        Integer a = input.nextInt();
-        Integer b = input.nextInt();
-<<<<<<< HEAD
 
-
-=======
-        Integer c = input.nextInt();
-        int площадь;() {
-            return 2 * a * b * c;
-        }
-        output.write(a.toString());
->>>>>>> parent of 6c94beb (0195)
-        //// Конец решения
-
-        // Закрытие выходного файла
-        output.close();
-    }
-<<<<<<< HEAD
-
-    static Integer garry(Integer a) {
-        return 10 - a;
+        System.out.println(hours + " : " + minutes);
+        System.out.println();
     }
 
-    static Integer larry(Integer b) {
-        return 10 - b;
-    }
+/*
 
-=======
->>>>>>> parent of 6c94beb (0195)
+4) // (Сделать через for)
+* * *
+* *
+*
+///
+*/
 }
 
