@@ -14,16 +14,21 @@ public class Application {
         // Начало решения
         Integer a = input.nextInt();
         Integer b = input.nextInt();
-        Integer c = input.nextInt();
 
-        output.write(area(a, b, c).toString());
+
         //// Конец решения
 
         // Закрытие выходного файла
         output.close();
     }
 
-    static Integer area(Integer a, Integer b, Integer c) {
-        return 2 * a * b * c;
+    static Integer garry(Integer a) {
+        return 10 - a;
     }
+
+    static Integer larry(Integer b) {
+        return 10 - b;
+    }
+
 }
+
