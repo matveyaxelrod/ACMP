@@ -82,12 +82,12 @@ public class Application {
     }
 
     static boolean последовательностьПравильная() {
-        if (стек.length() % 2 != 0) {
+        if (стек.length % 2 != 0) {
             return всёЛожно;
         }
 
-        for (int i = 0; i < стек.length(); i++) {
-            добавитьВСтек(стек.(i)); // скобки[i]
+        for (int i = 0; i < стек.length; i++) {
+            добавитьВСтек(стек[i]);
         }
 
         int закрывающиеСкобки = 0;
